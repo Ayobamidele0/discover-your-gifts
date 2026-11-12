@@ -7,7 +7,7 @@
   var PER_PAGE = 10;
   var TOTAL = QUESTIONS.length;
   var PAGES = Math.ceil(TOTAL / PER_PAGE);
-  var OPTIONS = [["Much", 3], ["Some", 2], ["Little", 1], ["Not at all", 0]];
+  var OPTIONS = [["Very true", 3], ["Somewhat true", 2], ["Slightly true", 1], ["Not at all", 0]];
   var KEY = "dyg-state-v1";
 
   var app = document.getElementById("app");
@@ -111,7 +111,7 @@
       el("p", { text: "God has given you one or more spiritual gifts if you are a Christian. This questionnaire is a starting point for discovering them." }),
       el("div", { class: "steps" }, [
         el("div", { class: "step" }, [el("b", { text: "1" }), el("div", { text: "Read " + TOTAL + " short statements." })]),
-        el("div", { class: "step" }, [el("b", { text: "2" }), el("div", { text: "For each one, choose how true it is of your life: Much, Some, Little or Not at all." })]),
+        el("div", { class: "step" }, [el("b", { text: "2" }), el("div", { text: "For each one, choose how true it is of your life: Very true, Somewhat true, Slightly true or Not at all." })]),
         el("div", { class: "step" }, [el("b", { text: "3" }), el("div", { text: "See your results straight away." })])
       ]),
       el("p", { class: "small muted", text: "Takes about 15–20 minutes. Your answers stay on this device and are not sent to anyone. You can pause and come back." }),
