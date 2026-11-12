@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Discover Your Gifts</title>
+<script>
+  // Apply the saved or device theme before the page paints.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("dyg-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand">Discover Your Gifts</div>
+    <div class="bar-right">
+      <button id="themeBtn" type="button" class="theme-btn" aria-label="Switch to dark mode">Dark mode</button>
+    </div>
+  </div>
+  <div id="progressWrap" class="progress-wrap" hidden>
+    <div class="progress-track" role="progressbar" aria-label="Statements answered" aria-valuemin="0" aria-valuemax="125" aria-valuenow="0" id="progressBar"><div id="progressFill" class="progress-fill"></div></div>
+    <div id="progressText" class="progress-text" hidden></div>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<noscript><p class="wrap">This test needs JavaScript switched on in your browser.</p></noscript>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
